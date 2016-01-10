@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'  
+//apply plugin: 'com.github.dcendents.android-maven'
 
 group='com.github.alecrespo'
 android {
@@ -20,16 +20,18 @@ android {
     }
 }
 repositories {
-        // ...
-        maven { url "https://jitpack.io" }
-    }
+    // ...
+    maven { url "https://jitpack.io" }
+}
 dependencies {
     compile 'com.android.support:appcompat-v7:23.+'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    //compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
-   // compile 'com.google.code.gson:gson:2.5'
-	        compile 'com.github.alecrespo:EmotionLibrary:v1.0'
+    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    compile 'com.google.code.gson:gson:2.5'
+	        //compile 'com.github.alecrespo:EmotionLibrary:v1.0'
+    //compile 'com.github.User:Repo:Tag'
+
 }
 /*task clearJar(type: Delete) {
     delete 'libs/myCompiledLibrary.jar'
