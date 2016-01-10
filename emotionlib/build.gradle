@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 //apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.github.dcendents.android-maven' // ADD THIS
 
 group='com.github.alecrespo'
 android {
@@ -33,15 +34,26 @@ dependencies {
     //compile 'com.github.User:Repo:Tag'
 
 }
-/*task clearJar(type: Delete) {
-    delete 'libs/myCompiledLibrary.jar'
+// build a jar with source files
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
 }
 
-task makeJar(type: Copy) {
-    from('build/bundles/release/')
-    into('libs/')
-    include('classes.jar')
-    rename ('classes.jar', 'myCompiledLibrary.jar')
+task javadoc(type: Javadoc) {
+    failOnError  false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.compile
 }
 
-makeJar.dependsOn(clearJar, build)*/
+// build a jar with javadoc
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
