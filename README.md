@@ -1,4 +1,4 @@
-# EmotionLibrary [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/DavidPacioianu/Emotion-Analysis-API/master/LICENSE)
+# EmotionLibrary [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/alecrespo/EmotionLibrary/blob/master/LICENSE)
 Android Wrapper for the Microsoft Project Oxford Emotion API.
 
 #Download
