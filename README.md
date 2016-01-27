@@ -3,7 +3,7 @@ Android Wrapper for the Microsoft Project Oxford Emotion API.
 
 #Download
 
-In your gradle file [ ![Download](https://api.bintray.com/packages/davidpacioianu/maven/emotion-analysis-api/images/download.svg) ](https://bintray.com/davidpacioianu/maven/emotion-analysis-api/_latestVersion)
+In your gradle file 
 ```groovy
 compile 'com.alternativecoding:EmotionLibrary:v1.2'
 ```
